@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <h2>Números Aleatórios</h2>
+
+  <p>Clique para ver a tabuada de números aleatórios de 0 a 100.</p>
+  <button (click)="getRandom()">Clique</button>
+  <hr />
+  <input class="form-control" type="number" [(ngModel)]="n">
+  <hr />
+  <table>
+    <tr *ngFor="let item of getMultiplicationTable(); index as i">
+      <td> {{n}} </td>
+      <td> x </td>
+      <td>{{i+1}}</td>
+      <td> = </td>
+      <td>{{item}}</td>
+    </tr>
+  </table>
+</div>
